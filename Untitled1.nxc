@@ -1,0 +1,15 @@
+/**************************************************
+/* Programme :  Accéléro Stabilisateur Main Program
+/*
+/* Objectif     : N/A
+/*
+/* Auteurs    : Lévy MARQUES, Benjamin HUSSON
+/* Date      : 29/02/2016
+/* Version   : Version initiale v0
+/**************************************************
+task ScrutationButton() {
+
+}
+task main(){
+
+}
