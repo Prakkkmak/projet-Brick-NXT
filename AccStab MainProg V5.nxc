@@ -7,6 +7,7 @@
 /* Date      : 29/02/2016
 /* Version   : Version v0.4
 /**************************************************/
+
 int x,y,z;  	//Variables accéllérométre
 bool statutButton = false;
 bool actif = false;
@@ -39,7 +40,7 @@ task affichageValeur() {  //Capture et Affiche les valeurs de l'accéllérométre (
     TextOut(0,  LCD_LINE3, "z:     ");
     NumOut(6*2, LCD_LINE3, z);
     TextOut(0, LCD_LINE4, "Activé:        ");
-    NumOut(6*2, LCD_LINE4, actif);
+    NumOut(30, LCD_LINE4, actif);
     Wait(100);
  }
 
@@ -57,16 +58,17 @@ task systemActif(){ //Affecte la variable d'activation en fonction du status du 
 		if (statutButton == true){
 			if(actif == true){
 				actif = false;
+        Wait(500);
 			}
 			else{
 				actif = true;
+				Wait(500);
 			}
 			}
 		}
 
 	}
 
-}
 
 //task stabilization()
 
@@ -77,3 +79,4 @@ task main(){
 //	start stabilization;
 
 }
+
