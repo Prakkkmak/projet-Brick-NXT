@@ -1,11 +1,11 @@
 /**************************************************
 /* Programme :  'Accéléro Stabilisateur' Main Program
 /* Localisation : ./
-/* Objectifs : N/A
+/* Objectifs : Le programme permet pour l'instant de mettre ON/OFF un systeme. Lors de l'appui d'un boutton le systeme s'active.
 /*
 /* Auteurs    : Lévy MARQUES, Benjamin HUSSON
 /* Date      : 29/02/2016
-/* Version   : Version v0.4
+/* Version   : Version v0.5
 /**************************************************/
 
 int x,y,z;  	//Variables accéllérométre
