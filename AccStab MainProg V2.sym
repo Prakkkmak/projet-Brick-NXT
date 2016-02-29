@@ -1,0 +1,403 @@
+#SYMBOLS
+Index	Identifier	Type	Flag	Data	Size	RefCount
+0	__CLSCSMutex0	9	0	0	4	2
+1	__signed_stack_002captureValeur	6	1	4	4	12
+2	__signed_stack_001captureValeur	6	1	8	4	12
+3	__RLSBmutex0	9	0	12	4	2
+4	__TextOutMutex	9	0	16	4	12
+5	__CLSRMutex0	9	0	20	4	2
+6	__CLSWMutex0	9	0	24	4	2
+7	__D0SetSensorLowspeed_inline_captureValeur	6	1	28	4	3
+8	__Wait_7qG2_ms_7qG2_000_inline_captureValeur	5	1	32	4	4
+9	__D0captureValeur	6	1	36	4	15
+10	__DU0SetSensorLowspeed_inline_captureValeur	5	1	40	4	2
+11	__ResetSensorMutex	9	0	44	4	2
+12	__captureValeur_7qG2_y_7qG2_000	4	1	48	2	9
+13	__constVal256	4	0	50	2	3
+14	__captureValeur_7qG2_z_7qG2_000	4	1	52	2	9
+15	__captureValeur_7qG2_x_7qG2_000	4	1	54	2	9
+16	__zfSetSensorLowspeed_inline_captureValeur	1	1	56	1	2
+17	__zfcaptureValeur	1	1	57	1	2
+18	__ResetSensor_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_captureValeur	1	1	58	1	2
+19	__SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLowspeed_inline_captureValeur	1	1	59	1	2
+20	__constVal127	2	0	60	1	3
+21	__captureValeur_Spawner_return	1	1	61	1	1
+22	____initialize_global_data_return	1	1	62	1	3
+23	__SetSensorLowspeed_7qG2_bIsPowered_7qG2_000_inline_captureValeur	1	1	63	1	2
+24	__SetSensorLowspeed_7qG2_port_7qG2_000_inline_captureValeur	1	1	64	1	4
+25	__SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_captureValeur	1	1	65	1	2
+26	__SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_captureValeur	1	1	66	1	2
+27	__SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLowspeed_inline_captureValeur	1	1	67	1	2
+28	__constVal4	2	0	68	1	4
+29	____ReadLSBytes0_return	1	1	69	1	3
+30	__constVal3	2	0	70	1	1
+31	__constVal5	2	0	71	1	1
+32	____ResetSensorSubroutine_return	1	1	72	1	3
+33	__ResetSensorTmp	1	1	73	1	2
+34	__ResetSensorPort	1	1	74	1	3
+35	__RLSBResult0	2	1	75	1	8
+36	__constVal15	2	0	76	1	1
+37	__constVal2	2	0	77	1	1
+38	__PFTmp	1	1	78	1	1
+39	__constVal1	2	0	79	1	4
+40	__RLSBytesCount0	1	1	80	1	13
+41	__RLSBIterations0	1	1	81	1	4
+42	__constVal0	2	1	82	1	1
+43	__CLSRArgs0	8	0	4	12	5
+44	__CLSRArgs0.Result	2	1	84	1	5
+45	__CLSRArgs0.Port	1	1	85	1	5
+46	__CLSRArgs0.Buffer	7	0	86	4	5
+47	__CLSRArgs0.Buffer.Buffer_type	1	0	0	1	0
+48	__CLSRArgs0.BufferLen	1	1	88	1	5
+49	__TextOutArgs	8	0	4	16	36
+50	__TextOutArgs.Result	2	1	92	1	36
+51	__TextOutArgs.Location	8	0	2	4	36
+52	__TextOutArgs.Location.X	4	1	96	2	36
+53	__TextOutArgs.Location.Y	4	1	98	2	36
+54	__TextOutArgs.Text	7	0	100	4	36
+55	__TextOutArgs.Text.Text_type	1	0	0	1	0
+56	__TextOutArgs.Options	5	1	104	4	36
+57	__CLSCSArgs0	8	0	3	4	4
+58	__CLSCSArgs0.Result	2	1	108	1	4
+59	__CLSCSArgs0.Port	1	1	109	1	4
+60	__CLSCSArgs0.BytesReady	1	1	110	1	4
+61	__CLSWArgs0	8	0	4	12	5
+62	__CLSWArgs0.Result	2	1	112	1	5
+63	__CLSWArgs0.Port	1	1	113	1	5
+64	__CLSWArgs0.Buffer	7	0	114	4	5
+65	__CLSWArgs0.Buffer.Buffer_type	1	0	0	1	0
+66	__CLSWArgs0.ReturnLen	1	1	116	1	5
+67	__constStr0011	7	0	118	4	1
+68	__constStr0011.__constStr0011_type	1	1	0	1	0
+69	__RLSReadBuf0	7	0	120	4	13
+70	__RLSReadBuf0.__RLSReadBuf0_type	1	0	0	1	0
+71	__strbufcaptureValeur	7	0	122	4	6
+72	__strbufcaptureValeur.__strbufcaptureValeur_type	1	0	0	1	0
+73	__constStr0010	7	0	124	4	1
+74	__constStr0010.__constStr0010_type	1	1	0	1	0
+75	__RLSBbufLSWrite1	7	0	126	4	1
+76	__RLSBbufLSWrite1.__RLSBbufLSWrite1_type	1	0	0	1	0
+77	__RLSLastGoodRead0	7	0	128	4	2
+78	__RLSLastGoodRead0.__RLSLastGoodRead0_type	1	0	0	1	0
+79	__constStr0009	7	0	130	4	1
+80	__constStr0009.__constStr0009_type	1	1	0	1	0
+#SOURCES
+Clump	Line	PC	Source
+0	35	0	#line 35 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+0	36	0		subcall __initialize_global_data, ____initialize_global_data_return
+0	35	2	#line 35 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+0	36	2	#line 36 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+0	37	2		subcall __captureValeur_Spawner, __captureValeur_Spawner_return
+0	36	4	#line 36 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+0	37	4		exit -1, -1
+1	4885	0		setin __constVal1, __ResetSensorPort, 5
+1	4887	4		getin __ResetSensorTmp, __ResetSensorPort, 5
+1	4888	8		brtst 5, __SensorStillInvalid, __ResetSensorTmp
+1	4889	11		subret ____ResetSensorSubroutine_return
+2	5672	0	#pragma macro 25
+2	5672	0		acquire __CLSWMutex0
+2	5672	1		set __CLSWArgs0.Port, 0
+2	5672	4		mov __CLSWArgs0.ReturnLen, __RLSBytesCount0
+2	5672	6		mov __CLSWArgs0.Buffer, __RLSReadBuf0
+2	5672	8		syscall 21, __CLSWArgs0
+2	5672	11		mov __RLSBResult0, __CLSWArgs0.Result
+2	5672	13		release __CLSWMutex0
+2	5673	14	#line 5673 "NXTDefs.h"
+2	5674	14		brtst 4, __RLSBReturn0, __RLSBytesCount0
+2	5675	17		arrinit __RLSReadBuf0, __constVal0, __RLSBytesCount0
+2	5676	21		brtst 5, __RLSBError0, __RLSBResult0
+2	5677	24		set __RLSBIterations0, 4
+2	5679	27	#pragma macro 23
+2	5679	27		acquire __CLSCSMutex0
+2	5679	28		set __CLSCSArgs0.Port, 0
+2	5679	31		syscall 23, __CLSCSArgs0
+2	5679	34		mov __RLSBytesCount0, __CLSCSArgs0.BytesReady
+2	5679	36		mov __RLSBResult0, __CLSCSArgs0.Result
+2	5679	38		release __CLSCSMutex0
+2	5679	39	#line 5679 "NXTDefs.h"
+2	5680	39		sub __RLSBIterations0, __RLSBIterations0, __constVal1
+2	5681	43		brtst 2, __RLSBError0, __RLSBIterations0
+2	5682	46		brtst 0, __RLSBError0, __RLSBResult0
+2	5683	49		brtst 4, __RLSBReadyToRead0, __RLSBResult0
+2	5685	52		wait2 NA, __constVal15
+2	5686	55		jmp __RLSBDoCheckStatus0
+2	5689	57	#pragma macro 25
+2	5689	57		acquire __CLSRMutex0
+2	5689	58		set __CLSRArgs0.Port, 0
+2	5689	61		mov __CLSRArgs0.BufferLen, __RLSBytesCount0
+2	5689	63		syscall 22, __CLSRArgs0
+2	5689	66		mov __RLSReadBuf0, __CLSRArgs0.Buffer
+2	5689	68		mov __RLSBResult0, __CLSRArgs0.Result
+2	5689	70		release __CLSRMutex0
+2	5689	71	#line 5689 "NXTDefs.h"
+2	5690	71		brtst 5, __RLSBError0, __RLSBResult0
+2	5691	74		mov __RLSLastGoodRead0, __RLSReadBuf0
+2	5692	76		jmp __RLSBDone0
+2	5694	78		mov __RLSReadBuf0, __RLSLastGoodRead0
+2	5696	80		arrsize __RLSBytesCount0, __RLSReadBuf0
+2	5698	83		subret ____ReadLSBytes0_return
+3	13	0	#line 13 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	14	0		set __SetSensorLowspeed_7qG2_port_7qG2_000_inline_captureValeur, 0
+3	13	3	#line 13 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	14	3	#line 14 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	15	3		mov __SetSensorLowspeed_7qG2_bIsPowered_7qG2_000_inline_captureValeur, __constVal1
+3	3758	5	#line 3758 "NXCDefs.h"
+3	3759	5		mov __SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_captureValeur, __SetSensorLowspeed_7qG2_port_7qG2_000_inline_captureValeur
+3	3758	7	#line 3758 "NXCDefs.h"
+3	3758	7	#line 3758 "NXCDefs.h"
+3	3759	7		mov __DU0SetSensorLowspeed_inline_captureValeur, __SetSensorLowspeed_7qG2_bIsPowered_7qG2_000_inline_captureValeur
+3	3758	9	#line 3758 "NXCDefs.h"
+3	3759	9		tst 5, __zfSetSensorLowspeed_inline_captureValeur, __DU0SetSensorLowspeed_inline_captureValeur
+3	3758	12	#line 3758 "NXCDefs.h"
+3	3759	12		brtst 4, __004__NXC_Label_36, __zfSetSensorLowspeed_inline_captureValeur
+3	3758	15	#line 3758 "NXCDefs.h"
+3	3759	15		set __D0SetSensorLowspeed_inline_captureValeur, 11
+3	3758	18	#line 3758 "NXCDefs.h"
+3	3759	18		jmp __004__NXC_Label_37
+3	3758	20	#line 3758 "NXCDefs.h"
+3	3759	20		set __D0SetSensorLowspeed_inline_captureValeur, 10
+3	3758	23	#line 3758 "NXCDefs.h"
+3	3759	23		mov __SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLowspeed_inline_captureValeur, __D0SetSensorLowspeed_inline_captureValeur
+3	3663	25	#line 3663 "NXCDefs.h"
+3	3664	25		setin __SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLowspeed_inline_captureValeur, __SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_captureValeur, 0
+3	3663	29	#line 3663 "NXCDefs.h"
+3	3759	29	#line 3759 "NXCDefs.h"
+3	3759	29	#line 3759 "NXCDefs.h"
+3	3760	29		mov __SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_captureValeur, __SetSensorLowspeed_7qG2_port_7qG2_000_inline_captureValeur
+3	3759	31	#line 3759 "NXCDefs.h"
+3	3759	31	#line 3759 "NXCDefs.h"
+3	3760	31		set __SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLowspeed_inline_captureValeur, 0
+3	3759	34	#line 3759 "NXCDefs.h"
+3	3676	34	#line 3676 "NXCDefs.h"
+3	3677	34		setin __SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLowspeed_inline_captureValeur, __SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_captureValeur, 1
+3	3676	38	#line 3676 "NXCDefs.h"
+3	3760	38	#line 3760 "NXCDefs.h"
+3	3760	38	#line 3760 "NXCDefs.h"
+3	3761	38		mov __ResetSensor_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_captureValeur, __SetSensorLowspeed_7qG2_port_7qG2_000_inline_captureValeur
+3	3760	40	#line 3760 "NXCDefs.h"
+3	3694	40	#line 3694 "NXCDefs.h"
+3	3695	40	#pragma macro 4
+3	3695	40		acquire __ResetSensorMutex
+3	3695	41		mov __ResetSensorPort, __ResetSensor_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_captureValeur
+3	3695	43		subcall __ResetSensorSubroutine, ____ResetSensorSubroutine_return
+3	3695	45		release __ResetSensorMutex
+3	3747	46	#line 3747 "NXCDefs.h"
+3	3694	46	#line 3694 "NXCDefs.h"
+3	3761	46	#line 3761 "NXCDefs.h"
+3	14	46	#line 14 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	14	46	#line 14 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	15	46		set __Wait_7qG2_ms_7qG2_000_inline_captureValeur, 50
+3	14	49	#line 14 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	7921	49	#line 7921 "NXCDefs.h"
+3	7922	49		wait2 NA, __Wait_7qG2_ms_7qG2_000_inline_captureValeur
+3	7921	52	#line 7921 "NXCDefs.h"
+3	16	52	#line 16 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	16	52	#line 16 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	17	52		set __D0captureValeur, 1
+3	17	55	#line 17 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	18	55		tst 5, __zfcaptureValeur, __D0captureValeur
+3	17	58	#line 17 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	18	58		brtst 4, __NXC_Label_494, __zfcaptureValeur
+3	17	61	#line 17 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	18	61	#pragma macro 72
+3	18	61		acquire __RLSBmutex0
+3	18	62		mov __RLSReadBuf0, __RLSBbufLSWrite1
+3	18	64		set __RLSBytesCount0, 6
+3	18	67		subcall __ReadLSBytes0, ____ReadLSBytes0_return
+3	18	69		tst 4, __D0captureValeur, __RLSBResult0
+3	18	72		index __captureValeur_7qG2_x_7qG2_000, __RLSReadBuf0, 65535
+3	18	76		index __RLSBytesCount0, __RLSReadBuf0, __constVal3
+3	18	80		brcmp 2, __RSHTAX3, __captureValeur_7qG2_x_7qG2_000, __constVal127
+3	18	84		sub __captureValeur_7qG2_x_7qG2_000, __captureValeur_7qG2_x_7qG2_000, __constVal256
+3	18	88		mul __captureValeur_7qG2_x_7qG2_000, __captureValeur_7qG2_x_7qG2_000, __constVal4
+3	18	92		add __captureValeur_7qG2_x_7qG2_000, __captureValeur_7qG2_x_7qG2_000, __RLSBytesCount0
+3	18	96		index __captureValeur_7qG2_y_7qG2_000, __RLSReadBuf0, __constVal1
+3	18	100		index __RLSBytesCount0, __RLSReadBuf0, __constVal4
+3	18	104		brcmp 2, __RSHTAY4, __captureValeur_7qG2_y_7qG2_000, __constVal127
+3	18	108		sub __captureValeur_7qG2_y_7qG2_000, __captureValeur_7qG2_y_7qG2_000, __constVal256
+3	18	112		mul __captureValeur_7qG2_y_7qG2_000, __captureValeur_7qG2_y_7qG2_000, __constVal4
+3	18	116		add __captureValeur_7qG2_y_7qG2_000, __captureValeur_7qG2_y_7qG2_000, __RLSBytesCount0
+3	18	120		index __captureValeur_7qG2_z_7qG2_000, __RLSReadBuf0, __constVal2
+3	18	124		index __RLSBytesCount0, __RLSReadBuf0, __constVal5
+3	18	128		brcmp 2, __RSHTAZ5, __captureValeur_7qG2_z_7qG2_000, __constVal127
+3	18	132		sub __captureValeur_7qG2_z_7qG2_000, __captureValeur_7qG2_z_7qG2_000, __constVal256
+3	18	136		mul __captureValeur_7qG2_z_7qG2_000, __captureValeur_7qG2_z_7qG2_000, __constVal4
+3	18	140		add __captureValeur_7qG2_z_7qG2_000, __captureValeur_7qG2_z_7qG2_000, __RLSBytesCount0
+3	18	144		release __RLSBmutex0
+3	3775	145	#line 3775 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	17	145	#line 17 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	17	145	#line 17 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	18	145	#line 18 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	19	145		set __signed_stack_001captureValeur, 0
+3	18	148	#line 18 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	18	148	#line 18 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	19	148		set __signed_stack_002captureValeur, 56
+3	18	151	#line 18 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	18	151	#line 18 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	19	151		strcat __strbufcaptureValeur, __constStr0009
+3	19	155	#line 19 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	20	155		acquire __TextOutMutex
+3	19	156	#line 19 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	20	156		mov __TextOutArgs.Location.X, __signed_stack_001captureValeur
+3	19	158	#line 19 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	20	158		mov __TextOutArgs.Location.Y, __signed_stack_002captureValeur
+3	19	160	#line 19 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	20	160		set __TextOutArgs.Options, 0
+3	19	163	#line 19 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	20	163		mov __TextOutArgs.Text, __strbufcaptureValeur
+3	19	165	#line 19 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	20	165		syscall 13, __TextOutArgs
+3	19	168	#line 19 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	20	168		mov __D0captureValeur, __TextOutArgs.Result
+3	19	170	#line 19 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	20	170		release __TextOutMutex
+3	19	171	#line 19 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	19	171	#line 19 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	20	171		set __signed_stack_001captureValeur, 12
+3	19	174	#line 19 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	19	174	#line 19 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	20	174		set __signed_stack_002captureValeur, 56
+3	19	177	#line 19 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	19	177	#line 19 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	20	177		mov __D0captureValeur, __captureValeur_7qG2_x_7qG2_000
+3	20	179	#line 20 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	21	179		acquire __TextOutMutex
+3	20	180	#line 20 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	21	180		mov __TextOutArgs.Location.X, __signed_stack_001captureValeur
+3	20	182	#line 20 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	21	182		mov __TextOutArgs.Location.Y, __signed_stack_002captureValeur
+3	20	184	#line 20 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	21	184		set __TextOutArgs.Options, 0
+3	20	187	#line 20 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	21	187		numtostr __TextOutArgs.Text, __D0captureValeur
+3	20	190	#line 20 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	21	190		syscall 13, __TextOutArgs
+3	20	193	#line 20 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	21	193		mov __D0captureValeur, __TextOutArgs.Result
+3	20	195	#line 20 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	21	195		release __TextOutMutex
+3	20	196	#line 20 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	20	196	#line 20 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	21	196		set __signed_stack_001captureValeur, 0
+3	20	199	#line 20 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	20	199	#line 20 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	21	199		set __signed_stack_002captureValeur, 48
+3	20	202	#line 20 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	20	202	#line 20 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	21	202		strcat __strbufcaptureValeur, __constStr0010
+3	21	206	#line 21 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	22	206		acquire __TextOutMutex
+3	21	207	#line 21 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	22	207		mov __TextOutArgs.Location.X, __signed_stack_001captureValeur
+3	21	209	#line 21 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	22	209		mov __TextOutArgs.Location.Y, __signed_stack_002captureValeur
+3	21	211	#line 21 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	22	211		set __TextOutArgs.Options, 0
+3	21	214	#line 21 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	22	214		mov __TextOutArgs.Text, __strbufcaptureValeur
+3	21	216	#line 21 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	22	216		syscall 13, __TextOutArgs
+3	21	219	#line 21 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	22	219		mov __D0captureValeur, __TextOutArgs.Result
+3	21	221	#line 21 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	22	221		release __TextOutMutex
+3	21	222	#line 21 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	21	222	#line 21 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	22	222		set __signed_stack_001captureValeur, 12
+3	21	225	#line 21 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	21	225	#line 21 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	22	225		set __signed_stack_002captureValeur, 48
+3	21	228	#line 21 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	21	228	#line 21 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	22	228		mov __D0captureValeur, __captureValeur_7qG2_y_7qG2_000
+3	22	230	#line 22 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	23	230		acquire __TextOutMutex
+3	22	231	#line 22 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	23	231		mov __TextOutArgs.Location.X, __signed_stack_001captureValeur
+3	22	233	#line 22 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	23	233		mov __TextOutArgs.Location.Y, __signed_stack_002captureValeur
+3	22	235	#line 22 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	23	235		set __TextOutArgs.Options, 0
+3	22	238	#line 22 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	23	238		numtostr __TextOutArgs.Text, __D0captureValeur
+3	22	241	#line 22 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	23	241		syscall 13, __TextOutArgs
+3	22	244	#line 22 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	23	244		mov __D0captureValeur, __TextOutArgs.Result
+3	22	246	#line 22 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	23	246		release __TextOutMutex
+3	22	247	#line 22 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	22	247	#line 22 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	23	247		set __signed_stack_001captureValeur, 0
+3	22	250	#line 22 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	22	250	#line 22 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	23	250		set __signed_stack_002captureValeur, 40
+3	22	253	#line 22 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	22	253	#line 22 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	23	253		strcat __strbufcaptureValeur, __constStr0011
+3	23	257	#line 23 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	24	257		acquire __TextOutMutex
+3	23	258	#line 23 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	24	258		mov __TextOutArgs.Location.X, __signed_stack_001captureValeur
+3	23	260	#line 23 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	24	260		mov __TextOutArgs.Location.Y, __signed_stack_002captureValeur
+3	23	262	#line 23 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	24	262		set __TextOutArgs.Options, 0
+3	23	265	#line 23 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	24	265		mov __TextOutArgs.Text, __strbufcaptureValeur
+3	23	267	#line 23 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	24	267		syscall 13, __TextOutArgs
+3	23	270	#line 23 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	24	270		mov __D0captureValeur, __TextOutArgs.Result
+3	23	272	#line 23 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	24	272		release __TextOutMutex
+3	23	273	#line 23 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	23	273	#line 23 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	24	273		set __signed_stack_001captureValeur, 12
+3	23	276	#line 23 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	23	276	#line 23 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	24	276		set __signed_stack_002captureValeur, 40
+3	23	279	#line 23 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	23	279	#line 23 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	24	279		mov __D0captureValeur, __captureValeur_7qG2_z_7qG2_000
+3	25	281	#line 25 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	26	281		acquire __TextOutMutex
+3	25	282	#line 25 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	26	282		mov __TextOutArgs.Location.X, __signed_stack_001captureValeur
+3	25	284	#line 25 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	26	284		mov __TextOutArgs.Location.Y, __signed_stack_002captureValeur
+3	25	286	#line 25 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	26	286		set __TextOutArgs.Options, 0
+3	25	289	#line 25 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	26	289		numtostr __TextOutArgs.Text, __D0captureValeur
+3	25	292	#line 25 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	26	292		syscall 13, __TextOutArgs
+3	25	295	#line 25 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	26	295		mov __D0captureValeur, __TextOutArgs.Result
+3	25	297	#line 25 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	26	297		release __TextOutMutex
+3	25	298	#line 25 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	25	298	#line 25 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	26	298		set __Wait_7qG2_ms_7qG2_000_inline_captureValeur, 100
+3	25	301	#line 25 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	7921	301	#line 7921 "NXCDefs.h"
+3	7922	301		wait2 NA, __Wait_7qG2_ms_7qG2_000_inline_captureValeur
+3	7921	304	#line 7921 "NXCDefs.h"
+3	26	304	#line 26 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	28	304	#line 28 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	29	304		jmp __NXC_Label_493
+3	28	306	#line 28 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+3	29	306		exit -1, -1
+4	0	0		subret __captureValeur_Spawner_return
+5	0	0		exit 0, 1
+6	39	0	#line 39 "C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc"
+6	40	0		subret ____initialize_global_data_return
+#CLUMPS
+Clump	Name	Offset	File
+0	main	0	C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc
+1	__ResetSensorSubroutine	7	NXTDefs.h
+2	__ReadLSBytes0	20	NXTDefs.h
+3	captureValeur	105	C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc
+4	__captureValeur_Returner	414	C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc
+5	__captureValeur_Spawner	416	C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc
+6	__initialize_global_data	419	C:\Users\Levy Marques\Documents\GitHub\PROJET - Brick NXT\projet-Brick-NXT\AccStab MainProg V2.nxc

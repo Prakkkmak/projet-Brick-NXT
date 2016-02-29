@@ -1,0 +1,44 @@
+/**************************************************
+/* Programme :  'Accéléro Stabilisateur' Main Program
+/* Localisation : ./
+/* Objectifs : N/A
+/*
+/* Auteurs    : Lévy MARQUES, Benjamin HUSSON
+/* Date      : 29/02/2016
+/* Version   : Version v3
+/**************************************************/
+
+task ScrutationButton() {      // Tâche de scrution d'appui de bouttons
+    SetSensorType(S1,SENSOR_TYPE_TOUCH);
+    SetSensorMode(S1,SENSOR_MODE_BOOL);
+    while(true){
+       statusButton=Sensor(S1);
+       }
+}
+task captureValeur() {
+  int x,y,z;
+
+  SetSensorLowspeed(S2);
+  Wait(50);
+
+  while(true) {
+    ReadSensorHTAccel(S2, x, y, z);
+    TextOut(0,  LCD_LINE1, "x:     ");
+    NumOut(6*2, LCD_LINE1, x);
+    TextOut(0,  LCD_LINE2, "y:     ");
+    NumOut(6*2, LCD_LINE2, y);
+    TextOut(0,  LCD_LINE3, "z:     ");
+    NumOut(6*2, LCD_LINE3, z);
+    TextOut(0, LCD_LINE4, "Activé:        ");
+    NumOut(6*2, LCD_LINE4, status);
+    Wait(100);
+}
+}
+
+
+
+
+
+task main(){
+    start captureValeur;
+}

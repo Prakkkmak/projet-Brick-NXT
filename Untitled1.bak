@@ -8,9 +8,6 @@
 /* Version   : Version initiale v1
 /**************************************************
 
-task captureValeur() {
-
-}
 
 task ScrutationButton() {      // Tâche de scrution d'appui de bouttons
 
