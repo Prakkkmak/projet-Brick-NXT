@@ -1,0 +1,79 @@
+/**************************************************
+/* Programme :  'Accéléro Stabilisateur' Main Program
+/* Localisation : ./
+/* Objectifs : N/A
+/*
+/* Auteurs    : Lévy MARQUES, Benjamin HUSSON
+/* Date      : 29/02/2016
+/* Version   : Version v0.4
+/**************************************************/
+int x,y,z;  	//Variables accéllérométre
+bool statutButton = false;
+bool actif = false;
+
+task scrutationButton() {      // Tâche de scrutation d'appui du bouton poussoir
+
+
+	//Initialisation du bouton poussoir :
+
+	SetSensorType(S1,SENSOR_TYPE_TOUCH);
+    SetSensorMode(S1,SENSOR_MODE_BOOL);
+    while(true){
+       statutButton=Sensor(S1);
+       }
+}
+
+
+task affichageValeur() {  //Capture et Affiche les valeurs de l'accéllérométre (x,y,z)
+
+
+  SetSensorLowspeed(S2);	//Initialisation de l'accéllérométre
+  Wait(50);
+
+  while(true) {		//Affichage infini des valeurs accéllérométre et du status de l'activation
+    ReadSensorHTAccel(S2, x, y, z);
+    TextOut(0,  LCD_LINE1, "x:     ");
+    NumOut(6*2, LCD_LINE1, x);
+    TextOut(0,  LCD_LINE2, "y:     ");
+    NumOut(6*2, LCD_LINE2, y);
+    TextOut(0,  LCD_LINE3, "z:     ");
+    NumOut(6*2, LCD_LINE3, z);
+    TextOut(0, LCD_LINE4, "Activé:        ");
+    NumOut(6*2, LCD_LINE4, actif);
+    Wait(100);
+ }
+
+}
+
+task systemActif(){ //Affecte la variable d'activation en fonction du status du bouton poussoir
+
+	actif = false; // Variable stabilization OK/NOT OK
+
+	while (true){
+
+
+		//Si le bouton est pressé, alors le système peut être activé.
+
+		if (statutButton == true){
+			actif = true;
+			Wait(500);
+		}
+		else if(statutButton == false){
+			actif = false;
+			Wait(500);
+		}
+
+	}
+
+}
+
+//task stabilization()
+
+task main(){
+ 	start scrutationButton;
+  start affichageValeur;
+	start  systemActif;
+//	start stabilization;
+
+}
+
