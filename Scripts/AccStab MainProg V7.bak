@@ -5,7 +5,7 @@
 /*
 /* Auteurs    : Lévy MARQUES, Benjamin HUSSON
 /* Date      : 29/02/2016
-/* Version   : Version v0.6
+/* Version   : Version v0.7
 /**************************************************/
 
 /* Variables */
@@ -81,6 +81,7 @@ task stabilisationV2(){
                         Off(OUT_A); // Arrêt du moteur
                 }
         }
+}
 
 
 task stabilisationV1(){

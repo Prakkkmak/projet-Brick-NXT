@@ -81,6 +81,7 @@ task stabilisationV2(){
                         Off(OUT_A); // Arrêt du moteur
                 }
         }
+}
 
 
 task stabilisationV1(){
@@ -120,6 +121,6 @@ task stabilisationV1(){
 
 
 task main(){
-         Precedes(scrutationButton,affichageValeur,systemActif,stabilisationV1); // Activation des différentes tâches
+         Precedes(scrutationButton,affichageValeur,systemActif,stabilisationV2); // Activation des différentes tâches
 }
 
