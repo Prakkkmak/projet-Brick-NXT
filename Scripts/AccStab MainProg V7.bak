@@ -1,4 +1,4 @@
-/**************************************************
+ /**************************************************
 /* Programme :  'Accéléro Stabilisateur' Main Program
 /* Localisation : ./
 /* Objectifs : Le programme permet pour l'instant de mettre ON/OFF un systeme. Lors de l'appui d'un boutton le systeme s'active.
@@ -7,11 +7,14 @@
 /* Date      : 29/02/2016
 /* Version   : Version v0.6
 /**************************************************/
+
 /* Variables */
 int x,y,z; //Données accéléromètre
 bool statutButton = false; //Status boutton
 bool actif = true; //Status système
+int degresposition;
 /*************/
+
 task scrutationButton() {      // Tâche de scrutation d'appui du bouton poussoir
         SetSensorType(S1,SENSOR_TYPE_TOUCH);//Initialisation du bouton poussoir
     SetSensorMode(S1,SENSOR_MODE_BOOL);//Initialisation du mode
@@ -25,12 +28,15 @@ task affichageValeur() {  //Capture et Affiche les valeurs de l'accéllérométre (
         Wait(50);
         while(true) {                //Affichage infini des valeurs accéllérométre et du status de l'activation
                 ReadSensorHTAccel(S2, x, y, z);
+                degresposition = 0.45*x;
                 TextOut(0,  LCD_LINE1, "x:     ");
                 NumOut(6*2, LCD_LINE1, x);
                 TextOut(0,  LCD_LINE2, "y:     ");
                 NumOut(6*2, LCD_LINE2, y);
                 TextOut(0,  LCD_LINE3, "z:     ");
                 NumOut(6*2, LCD_LINE3, z);
+                TextOut(0,  LCD_LINE5, "d:     "); //Affichage position en degres
+                NumOut(6*2, LCD_LINE5, degresposition);
                 if(actif) { // Affichage de l'état du système
                         TextOut(0, LCD_LINE4, "SYSTEME EN MARCHE");
                 }
@@ -60,6 +66,22 @@ task systemActif(){ //Affecte la variable d'activation en fonction du status du 
 
 }
 
+task stabilisationV2(){
+        int puissance,zoneMorte,attenuation; // Variables entières
+        zoneMorte=10; // Zone morte
+        puissance=40; // Puissance de moteur
+        attenuation=5; // Attenuation
+
+        while(true){
+                puissance=x/attenuation; // Puissance du moteur
+
+                if(x < (-zoneMorte) || x > zoneMorte){ //Zone morte
+                        OnFwd(OUT_A,puissance); //Puissance
+                        } else {
+                        Off(OUT_A); // Arrêt du moteur
+                }
+        }
+
 
 task stabilisationV1(){
    int zoneMorte,puissance,degresposition;
@@ -69,37 +91,29 @@ task stabilisationV1(){
    degres=2;
    degresposition=1/2*x;
    while (true){
-
+            degresposition=0.45*x;
+            if (degresposition < 30){
+             puissance = 15;
+            }
+            else{
+             puissance = 40;
+            }
             if (actif == true){
 
-				if (x > zoneMorte ){
-                              RotateMotor(OUT_A,puissance,-degresposition);
-                     }
-                     else if ( x < (-zoneMorte) ){
-							  RotateMotor(OUT_A,puissance,degresposition);
-					}
-
-
-				/*
-					// ETAT de stabilisation a moins de 20°
-                     if (x > zoneMorte && x < 45){
-                              RotateMotorPID(OUT_A,puissance,-degres,40,40,90);
-                     }
-                     else if ( x < (-zoneMorte) && x > -45 ){
-            RotateMotorPID(OUT_A,puissance,degres,40,40,90);
-					}
-
-					// ETAT de stabilisation a + de 20°
-                     if (x > zoneMorte && x > 45){
-                              RotateMotorPID(OUT_A,50,(2*x)+5,40,40,90);
-                     }
-                     else if ( x < (-zoneMorte) && x < -45 ){
-            RotateMotorPID(OUT_A,50,(2*x)-5,40,40,90);
-					}
-					*/
-
-
+            if(degresposition >10){
+             OnFwd(OUT_A,(-puissance));
             }
+
+            if(degresposition < (-10)){
+             OnFwd(OUT_A,puissance);
+            }
+
+            if(degresposition > (-10) && degresposition < 10){
+             Off(OUT_A);
+            }
+
+                                        }
+
 
     }
 }

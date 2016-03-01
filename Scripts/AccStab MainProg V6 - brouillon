@@ -11,6 +11,7 @@
 int x,y,z; //Données accéléromètre
 bool statutButton = false; //Status boutton
 bool actif = true; //Status système
+int degresposition;
 /*************/
 task scrutationButton() {      // Tâche de scrutation d'appui du bouton poussoir
         SetSensorType(S1,SENSOR_TYPE_TOUCH);//Initialisation du bouton poussoir
@@ -25,12 +26,15 @@ task affichageValeur() {  //Capture et Affiche les valeurs de l'accéllérométre (
         Wait(50);
         while(true) {                //Affichage infini des valeurs accéllérométre et du status de l'activation
                 ReadSensorHTAccel(S2, x, y, z);
+                degresposition = 0.45*x;
                 TextOut(0,  LCD_LINE1, "x:     ");
                 NumOut(6*2, LCD_LINE1, x);
                 TextOut(0,  LCD_LINE2, "y:     ");
                 NumOut(6*2, LCD_LINE2, y);
                 TextOut(0,  LCD_LINE3, "z:     ");
                 NumOut(6*2, LCD_LINE3, z);
+                TextOut(0,  LCD_LINE5, "d:     ");
+                NumOut(6*2, LCD_LINE5, degresposition);
                 if(actif) { // Affichage de l'état du système
                         TextOut(0, LCD_LINE4, "SYSTEME EN MARCHE");
                 }
@@ -69,14 +73,27 @@ task stabilisationV1(){
    degres=2;
    degresposition=1/2*x;
    while (true){
-
+            degresposition=0.45*x;
+            if (degresposition < 30){
+             puissance = 15;
+            }
+            else{
+             puissance = 40;
+            }
             if (actif == true){
 
-				if (x > zoneMorte ){
-                              RotateMotor(OUT_A,puissance,-degresposition);
-                     }
-                     else if ( x < (-zoneMorte) ){
-							  RotateMotor(OUT_A,puissance,degresposition);
+            if(degresposition >10){
+             OnFwd(OUT_A,(-puissance));
+            }
+
+            if(degresposition < (-10)){
+             OnFwd(OUT_A,puissance);
+            }
+
+            if(degresposition > (-10) && degresposition < 10){
+             Off(OUT_A);
+            }
+
 					}
 
 
@@ -99,7 +116,7 @@ task stabilisationV1(){
 					*/
 
 
-            }
+
 
     }
 }
@@ -108,4 +125,3 @@ task stabilisationV1(){
 task main(){
          Precedes(scrutationButton,affichageValeur,systemActif,stabilisationV1); // Activation des différentes tâches
 }
-

@@ -5,15 +5,15 @@
 /*
 /* Auteurs    : Lévy MARQUES, Benjamin HUSSON
 /* Date      : 29/02/2016
-/* Version   : Version v0.5
+/* Version   : Version v0.6
 /**************************************************/
 /* Variables */
 int x,y,z; //Données accéléromètre
 bool statutButton = false; //Status boutton
-bool actif = false; //Status système
+bool actif = true; //Status système
 /*************/
 task scrutationButton() {      // Tâche de scrutation d'appui du bouton poussoir
-	SetSensorType(S1,SENSOR_TYPE_TOUCH);//Initialisation du bouton poussoir
+        SetSensorType(S1,SENSOR_TYPE_TOUCH);//Initialisation du bouton poussoir
     SetSensorMode(S1,SENSOR_MODE_BOOL);//Initialisation du mode
     while(true){ //On capture en boucle ll'état du boutton
        statutButton=Sensor(S1);
@@ -21,48 +21,68 @@ task scrutationButton() {      // Tâche de scrutation d'appui du bouton poussoir
 }
 
 task affichageValeur() {  //Capture et Affiche les valeurs de l'accéllérométre (x,y,z)
-	SetSensorLowspeed(S2);	//Initialisation de l'accéllérométre
-	Wait(50);
-	while(true) {		//Affichage infini des valeurs accéllérométre et du status de l'activation
-		ReadSensorHTAccel(S2, x, y, z);
-		TextOut(0,  LCD_LINE1, "x:     ");
-		NumOut(6*2, LCD_LINE1, x);
-		TextOut(0,  LCD_LINE2, "y:     ");
-		NumOut(6*2, LCD_LINE2, y);
-		TextOut(0,  LCD_LINE3, "z:     ");
-		NumOut(6*2, LCD_LINE3, z);
-		if(actif) { // Affichage de l'état du système
-			TextOut(0, LCD_LINE4, "SYSTEME EN MARCHE");		
-		}
-		else {
-			TextOut(0, LCD_LINE4, "SYSTEME EN ARRET");	
-		}
+        SetSensorLowspeed(S2);        //Initialisation de l'accéllérométre
+        Wait(50);
+        while(true) {                //Affichage infini des valeurs accéllérométre et du status de l'activation
+                ReadSensorHTAccel(S2, x, y, z);
+                TextOut(0,  LCD_LINE1, "x:     ");
+                NumOut(6*2, LCD_LINE1, x);
+                TextOut(0,  LCD_LINE2, "y:     ");
+                NumOut(6*2, LCD_LINE2, y);
+                TextOut(0,  LCD_LINE3, "z:     ");
+                NumOut(6*2, LCD_LINE3, z);
+                if(actif) { // Affichage de l'état du système
+                        TextOut(0, LCD_LINE4, "SYSTEME EN MARCHE");
+                }
+                else {
+                        TextOut(0, LCD_LINE4, "SYSTEME EN ARRET");
+                }
     Wait(100);
-	}
+        }
 }
 
 task systemActif(){ //Affecte la variable d'activation en fonction du status du bouton poussoir
 
-	actif = false; // Variable stabilization OK/NOT OK
+        actif = true; // Variable stabilization OK/NOT OK
 
-	while (true){
-		if (statutButton == true){ //Si le boutton est activé
-			if(actif == true){ // Si le systeme est déjà actif
-				actif = false; // Le systeme se désactive
-				Wait(500);
-			}
-			else{
-				actif = true; // Si le système n'est pas actif
-				Wait(500); // Le système s'active
-			}
-		}
-	}
+        while (true){
+                if (statutButton == true){ //Si le boutton est activé
+                        if(actif == true){ // Si le systeme est déjà actif
+                                actif = false; // Le systeme se désactive
+                                Wait(500);
+                        }
+                        else{
+                                actif = true; // Si le système n'est pas actif
+                                Wait(500); // Le système s'active
+                        }
+                }
+        }
 
 }
 
+
+task stabilisationV1(){
+   int zoneMorte,puissance;
+   int degres;
+   zoneMorte=15;
+   puissance=25;
+   degres=10;
+   while (true){
+   
+            if (actif == true){
+                     if (x > zoneMorte && x > 30){
+                              RotateMotorPID(OUT_A,puissance,-degres,40,40,90);
+                     }
+                     else if ( x < (-zoneMorte) ){
+            RotateMotorPID(OUT_A,puissance,degres,40,40,90);
+        }
+
+            }
+            
+    }
+}
 
 
 task main(){
- 	Precedes(scrutationButton,affichageValeur,systemActif); // Activation des différentes tâches
+         Precedes(scrutationButton,affichageValeur,systemActif,stabilisationV1); // Activation des différentes tâches
 }
-
