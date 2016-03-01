@@ -32,10 +32,10 @@ task affichageValeur() {  //Capture et Affiche les valeurs de l'accéllérométre (
 		TextOut(0,  LCD_LINE3, "z:     ");
 		NumOut(6*2, LCD_LINE3, z);
 		if(actif) { // Affichage de l'état du système
-			TextOut(0, LCD_LINE4, "SYSTEME EN MARCHE");
+			TextOut(0, LCD_LINE4, "SYSTEME EN MARCHE");		
 		}
 		else {
-			TextOut(0, LCD_LINE4, "SYSTEME EN ARRET");
+			TextOut(0, LCD_LINE4, "SYSTEME EN ARRET");	
 		}
     Wait(100);
 	}
@@ -61,19 +61,8 @@ task systemActif(){ //Affecte la variable d'activation en fonction du status du 
 }
 
 
-task stabilisationV1(){
-
-	if (actif == true){
-		if (x > 10){
-			RotateMotor(OUT_A,20,1);
-		}
-	}
-
-}
-
 
 task main(){
- 	Precedes(scrutationButton,affichageValeur,systemActif,stabilisationV1); // Activation des différentes tâches
+ 	Precedes(scrutationButton,affichageValeur,systemActif); // Activation des différentes tâches
 }
-
 
