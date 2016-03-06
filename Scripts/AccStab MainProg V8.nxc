@@ -1,0 +1,160 @@
+                 /**************************************************
+/* Programme :  'Accéléro Stabilisateur' Main Program
+/* Localisation : ./
+/* Objectifs : Le programme permet pour l'instant de mettre ON/OFF un systeme. Lors de l'appui d'un boutton le systeme s'active.
+/*
+/* Auteurs    : Lévy MARQUES, Benjamin HUSSON
+/* Date      : 29/02/2016
+/* Version   : Version v0.8
+/**************************************************/
+
+/* Variables */
+int x,y,z;	//Données accéléromètre
+bool statutButton = false;	//Status boutton
+bool actif = true;	//Variable qui stocke l'état du système ( Stabilisateur qui fonctionne ou pas)
+int degresposition; //Position de la barre en degrès
+/*************/
+
+task scrutationButton() {      // Tâche de scrutation d'appui du bouton poussoir
+
+	SetSensorType(S1,SENSOR_TYPE_TOUCH);	//Initialisation du bouton poussoir
+	SetSensorMode(S1,SENSOR_MODE_BOOL);
+
+	while(true){	//On capture en boucle l'état du boutton
+		statutButton=Sensor(S1);
+       }
+
+}
+
+
+task affichageValeur() {  //Capture et Affiche les valeurs de l'accéllérométre (x,y,z)
+
+		SetSensorLowspeed(S2);        //Initialisation de l'accéllérométre
+		Wait(50);
+
+		while(true) {                //Affichage infini des valeurs accéllérométre et du status de l'activation
+
+			ReadSensorHTAccel(S2, x, y, z);
+			degresposition = 0.45*x;
+			TextOut(0,  LCD_LINE1, "x:     ");
+			NumOut(6*2, LCD_LINE1, x);
+			TextOut(0,  LCD_LINE2, "y:     ");
+			NumOut(6*2, LCD_LINE2, y);
+			TextOut(0,  LCD_LINE3, "z:     ");
+			NumOut(6*2, LCD_LINE3, z);
+			TextOut(0,  LCD_LINE5, "d:     ");	//Affichage position en degres
+			NumOut(6*2, LCD_LINE5, degresposition);
+
+			if(actif) {	// Affichage de l'état du système
+						TextOut(0, LCD_LINE4, "SYSTEM ON ");
+                }
+			else {
+                        TextOut(0, LCD_LINE4, "SYSTEM OFF");
+                }
+
+			Wait(100);
+
+        }
+}
+
+
+task systemActif(){ //Affecte la variable d'activation en fonction du status du bouton poussoir
+
+	while (true){
+
+		if (statutButton == true){ //Si le boutton est activé
+
+			if(actif == true){ // .. Et que le systeme est déjà actif
+				actif = false; // Le système se désactive
+				Wait(500);
+			}
+			else{	// .. Et que le système n'est pas actif
+				actif = true; // Le système s'active
+				Wait(500);
+			}
+
+		}
+
+	}
+
+}
+
+
+task stabilisationV2(){
+
+		int puissance,zoneMorte,attenuation; // Variables entières
+        zoneMorte=10; // Zone morte
+        puissance=40; // Puissance de moteur
+        attenuation=5; // Attenuation
+
+        while(true){
+
+				puissance=x/attenuation; // Puissance du moteur
+
+                if(x < (-zoneMorte) || x > zoneMorte){ //Zone morte
+                        OnFwd(OUT_A,puissance); //Puissance
+                        } else {
+                        Off(OUT_A); // Arrêt du moteur
+                }
+
+        }
+}
+
+
+task stabilisationV1(){
+   int zoneMorte,puissance,degresposition;
+   int degres;
+   zoneMorte=15;
+   puissance=25;
+   degres=2;
+   degresposition=1/2*x;
+   while (true){
+            degresposition=0.45*x;
+            if (degresposition < 30){
+             puissance = 15;
+            }
+            else{
+             puissance = 40;
+            }
+            if (actif == true){
+
+            if(degresposition >10){
+             OnFwd(OUT_A,(-puissance));
+            }
+
+            if(degresposition < (-10)){
+             OnFwd(OUT_A,puissance);
+            }
+
+            if(degresposition > (-10) && degresposition < 10){
+             Off(OUT_A);
+            }
+
+                                        }
+
+
+    }
+}
+
+
+task moteur2(){
+
+	/*Initialisation des deux boutons :
+	int ButtonPressed(buttonNumber, reset);
+  */
+
+	if (int ButtonPressed(BTNLEFT, reset);){	//Si le bouton gauche est activé alors..
+		RotateMotor(OUT_B,20,5);	//.. On active le moteur dans un sens
+	}
+	else if (int ButtonPressed(BTNRIGHT, reset);){	//Sinon, si le bouton de droite est activé alors..
+		RotateMotor(OUT_B,20,(-5);	//.. On active le moteur dans le sens inverse
+	}
+
+}
+
+
+task main(){
+         Precedes(scrutationButton,affichageValeur,systemActif,stabilisationV2,moteur2); // Activation des différentes tâches
+}
+
+
