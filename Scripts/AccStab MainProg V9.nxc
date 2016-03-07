@@ -1,4 +1,4 @@
-                 /**************************************************
+;                 /**************************************************
 /* Programme :  'Accéléro Stabilisateur' Main Program
 /* Localisation : ./
 /* Objectifs : Le programme permet pour l'instant de mettre ON/OFF un systeme. Lors de l'appui d'un boutton le systeme s'active.
@@ -84,12 +84,12 @@ task systemActif(){ //Affecte la variable d'activation en fonction du status du 
 task stabilisationV2(){
 
 		int puissance,zoneMorte,attenuation; // Variables entières
-        zoneMorte=10; // Zone morte
+        zoneMorte=5; // Zone morte
         puissance=40; // Puissance de moteur
         attenuation=5; // Attenuation
 
         while(true){
-
+        if (actif){
 				puissance=x/attenuation; // Puissance du moteur
 
                 if(x < (-zoneMorte) || x > zoneMorte){ //Zone morte
@@ -97,7 +97,7 @@ task stabilisationV2(){
                         } else {
                         Off(OUT_A); // Arrêt du moteur
                 }
-
+           }
         }
 }
 
@@ -144,12 +144,15 @@ task moteur2(){
 	int ButtonPressed(buttonNumber, reset);
     */
 	while(true){
-		if (int ButtonPressed(BTNLEFT, reset);){	//Si le bouton gauche est activé alors..
-			RotateMotorPID(OUT_B,20,5,90,40,40);	//.. On active le moteur dans un sens
+		if (ButtonPressed(BTNLEFT, true)){	//Si le bouton gauche est activé alors..
+                                OnFwd(OUT_B,60);
 		}
-		else if (int ButtonPressed(BTNRIGHT, reset);){	//Sinon, si le bouton de droite est activé alors..
-			RotateMotor(OUT_B,20,(-5),90,40,40);	//.. On active le moteur dans le sens inverse
+		else if (ButtonPressed(BTNRIGHT, true)){	//Sinon, si le bouton de droite est activé alors..
+                                     OnFwd(OUT_B,-60);
 		}
+		else {
+         Off(OUT_B);
+    }
 	}
 }
 

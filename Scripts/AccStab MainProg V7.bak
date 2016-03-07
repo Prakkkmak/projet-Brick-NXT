@@ -76,9 +76,12 @@ task stabilisationV2(){
                 puissance=x/attenuation; // Puissance du moteur
 
                 if(x < (-zoneMorte) || x > zoneMorte){ //Zone morte
-                        OnFwd(OUT_A,puissance); //Puissance
+                        OnFwd(OUT_A,-puissance); //Puissance
                         } else {
                         Off(OUT_A); // Arrêt du moteur
+                }
+                if(z<0){
+                   OnFwd(OUT_A,40);
                 }
         }
 }
@@ -121,6 +124,6 @@ task stabilisationV1(){
 
 
 task main(){
-         Precedes(scrutationButton,affichageValeur,systemActif,stabilisationV1); // Activation des différentes tâches
+         Precedes(scrutationButton,affichageValeur,systemActif,stabilisationV2); // Activation des différentes tâches
 }
 

@@ -76,9 +76,12 @@ task stabilisationV2(){
                 puissance=x/attenuation; // Puissance du moteur
 
                 if(x < (-zoneMorte) || x > zoneMorte){ //Zone morte
-                        OnFwd(OUT_A,puissance); //Puissance
+                        OnFwd(OUT_A,-puissance); //Puissance
                         } else {
                         Off(OUT_A); // Arrêt du moteur
+                }
+                if(z<0){
+                   OnFwd(OUT_A,-40);
                 }
         }
 }

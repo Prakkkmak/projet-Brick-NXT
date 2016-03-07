@@ -83,19 +83,25 @@ task systemActif(){ //Affecte la variable d'activation en fonction du status du 
 
 task stabilisationV2(){
 
-		int puissance,zoneMorte,attenuation; // Variables entières
-        zoneMorte=5; // Zone morte
+		int puissance,zoneMorte,attenuation,stabilisationDegres,zoneMortePlus,zoneMorteMoins; // Variables entières
+        stabilisationDegres = 0 ;
+        zoneMorte=5   ;
+        zoneMortePlus= stabilisationDegres+zoneMorte; // Zone morte
+        zoneMorteMoins= stabilisationDegres-zoneMorte;
         puissance=40; // Puissance de moteur
         attenuation=5; // Attenuation
 
         while(true){
         if (actif){
-				puissance=x/attenuation; // Puissance du moteur
-
-                if(x < (-zoneMorte) || x > zoneMorte){ //Zone morte
-                        OnFwd(OUT_A,puissance); //Puissance
-                        } else {
-                        Off(OUT_A); // Arrêt du moteur
+				puissance=(stabilisationDegres-x)/attenuation; // Puissance du moteur
+                //if( z < 0 ){
+                //OnFwd(OUT_A,60);
+                //}
+                if(x < zoneMorteMoins || x > zoneMortePlus){ //Zone morte
+                        OnFwd(OUT_A,-puissance); //Puissance
+                 }
+                else {
+                Off(OUT_A); // Arrêt du moteur
                 }
            }
         }
@@ -145,13 +151,16 @@ task moteur2(){
     */
 	while(true){
 		if (ButtonPressed(BTNLEFT, true)){	//Si le bouton gauche est activé alors..
-                                OnFwd(OUT_B,60);
+                                OnFwd(OUT_BC,-20);
+                                Wait(150);
 		}
 		else if (ButtonPressed(BTNRIGHT, true)){	//Sinon, si le bouton de droite est activé alors..
-                                     OnFwd(OUT_B,-60);
+                                     OnFwd(OUT_BC,20);
+                                     Wait(150);
 		}
 		else {
-         RotateMotor(100,0);
+         Off(OUT_BC);
+         
     }
 	}
 }
