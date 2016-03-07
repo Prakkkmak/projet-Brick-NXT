@@ -5,7 +5,7 @@
 /*
 /* Auteurs    : Lévy MARQUES, Benjamin HUSSON
 /* Date      : 29/02/2016
-/* Version   : Version v0.9
+/* Version   : Version v0.10b
 /* On suppose que l'utilisateur est intéligent et sait utiliser le script.
 /**************************************************/
 
@@ -15,7 +15,10 @@ bool statutButton = false;	//Status boutton
 bool actif = true;	//Variable qui stocke l'état du système ( Stabilisateur qui fonctionne ou pas)
 int degresposition; //Position de la barre en degrès
 /*************/
-
+int calculDegres(int var){
+      int degresPosition=2.22*var;
+      return degresPosition;
+}
 task scrutationButton() {      // Tâche de scrutation d'appui du bouton poussoir
 
 	SetSensorType(S1,SENSOR_TYPE_TOUCH);	//Initialisation du bouton poussoir
@@ -84,19 +87,19 @@ task systemActif(){ //Affecte la variable d'activation en fonction du status du 
 task stabilisationV2(){
 
 		int puissance,zoneMorte,attenuation,stabilisationDegres,zoneMortePlus,zoneMorteMoins; // Variables entières
-        stabilisationDegres = 0 ;
+        stabilisationDegres = 45 ;
         zoneMorte=5   ;
         zoneMortePlus= stabilisationDegres+zoneMorte; // Zone morte
         zoneMorteMoins= stabilisationDegres-zoneMorte;
         puissance=40; // Puissance de moteur
-        attenuation=5; // Attenuation
+        attenuation=6; // Attenuation
 
         while(true){
         if (actif){
-				puissance=(stabilisationDegres-x)/attenuation; // Puissance du moteur
-                //if( z < 0 ){
-                //OnFwd(OUT_A,60);
-                //}
+				puissance=(calculDegres(stabilisationDegres)-x)/attenuation; // Puissance du moteur
+                if( z < 0 ){
+                OnFwd(OUT_A,60);
+                }
                 if(x < zoneMorteMoins || x > zoneMortePlus){ //Zone morte
                         OnFwd(OUT_A,-puissance); //Puissance
                  }
@@ -152,11 +155,11 @@ task moteur2(){
 	while(true){
 		if (ButtonPressed(BTNLEFT, true)){	//Si le bouton gauche est activé alors..
                                 OnFwd(OUT_BC,-20);
-                                Wait(150);
+                                Wait(300);
 		}
 		else if (ButtonPressed(BTNRIGHT, true)){	//Sinon, si le bouton de droite est activé alors..
                                      OnFwd(OUT_BC,20);
-                                     Wait(150);
+                                     Wait(300);
 		}
 		else {
          Off(OUT_BC);
