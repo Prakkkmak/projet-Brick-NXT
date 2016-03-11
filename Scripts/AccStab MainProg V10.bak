@@ -87,7 +87,7 @@ task systemActif(){ //Affecte la variable d'activation en fonction du status du 
 task stabilisationV2(){
 
 		int puissance,zoneMorte,attenuation,stabilisationDegres,zoneMortePlus,zoneMorteMoins; // Variables entières
-        stabilisationDegres = 45 ;
+        stabilisationDegres = 0 ;
         zoneMorte=5   ;
         zoneMortePlus= stabilisationDegres+zoneMorte; // Zone morte
         zoneMorteMoins= stabilisationDegres-zoneMorte;
